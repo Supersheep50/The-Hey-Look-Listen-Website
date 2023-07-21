@@ -62,7 +62,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'hey-look-listen.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'hey-look-listen-8c4ae7f879be.herokuapp.com']
 
 # Application definition
 
