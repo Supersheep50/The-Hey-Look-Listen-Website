@@ -23,7 +23,7 @@ const NavBar = () => {
               activeClassName={styles.Active}
               to="/"
             >
-              <i className="fas fa-home"></i>Home
+              <i className="fa-solid fa-microphone"></i>Home
             </NavLink>
             <NavLink
               className={styles.NavLink}
@@ -38,6 +38,20 @@ const NavBar = () => {
               activeClassName={styles.Active}
             >
               <i className="fas fa-user-plus"></i>Sign up
+            </NavLink>
+            <NavLink
+              to="/yarns"
+              className={styles.NavLink}
+              activeClassName={styles.Active}
+            >
+              <i className="fa-solid fa-book"></i>Gaming Yarns
+            </NavLink>
+            <NavLink
+              to="/blog"
+              className={styles.NavLink}
+              activeClassName={styles.Active}
+            >
+              <i className="fa-solid fa-blog"></i>Blog
             </NavLink>
           </Nav>
         </Navbar.Collapse>
