@@ -60,8 +60,8 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = 'DEBUG' in os.environ
-DEBUG = True
+DEBUG = 'DEBUG' in os.environ
+
 
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS'),'localhost','hey-look-listen-8c4ae7f879be.herokuapp.com', '8000-supersheep50-hllbackend-vfio4emeyia.ws-eu102.gitpod.io']
 
@@ -96,7 +96,7 @@ SITE_ID = 1
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
