@@ -60,7 +60,8 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEBUG' in os.environ
+#DEBUG = 'DEBUG' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS'),'localhost','hey-look-listen-8c4ae7f879be.herokuapp.com', '8000-supersheep50-hllbackend-vfio4emeyia.ws-eu102.gitpod.io']
 
