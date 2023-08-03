@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/HLL-logo.jpg";
 import styles from "../styles/Navbar.module.css";
 import { NavLink } from "react-router-dom";
+import { CurrentUserContext } from "../App";
+
 
 
 const NavBar = () => {
