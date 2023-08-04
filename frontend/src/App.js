@@ -12,10 +12,8 @@ import SignInForm from "./pages/auth/SignInForm";
 function App() {
  
 
- 
   return (
-    <CurrentUserContext.Provider value={currentUser}>
-    <SetCurrentUserContext.Provider value={setCurrentUser}>
+   
     <div className={styles.App}>
       <NavBar />
       <Container className={styles.Main}>
@@ -25,14 +23,11 @@ function App() {
           <Route exact path="/signup" render={() => < SignUpForm />}/>
           <Route exact path="/yarns" render={() => <h1>Gaming Yarns</h1>} />
           <Route exact path="/blog" render={() => <h1>Blog</h1>} />
-
-
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>
     </div>
-    </SetCurrentUserContext.Provider>
-    </CurrentUserContext.Provider>
+   
   );
 }
 
