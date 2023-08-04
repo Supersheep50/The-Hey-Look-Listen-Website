@@ -8,6 +8,29 @@ import { CurrentUserContext } from "../App";
 
 
 const NavBar = () => {
+  const currentUser = useContext(CurrentUserContext);
+
+  const loggedInIcons = <>{currentUser?.username}</>;
+  const loggedOutIcons = (
+    <>
+      <NavLink
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/signin"
+      >
+        <i className="fas fa-sign-in-alt"></i>Sign in
+      </NavLink>
+      <NavLink
+        to="/signup"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <i className="fas fa-user-plus"></i>Sign up
+      </NavLink>
+    </>
+  );
+
+
   return (
     <Navbar className={styles.NavBar} expand="md" fixed="top">
       <Container>
@@ -32,20 +55,6 @@ const NavBar = () => {
               activeClassName={styles.Active}
               to="/signin"
             >
-              <i className="fas fa-sign-in-alt"></i>Sign in
-            </NavLink>
-            <NavLink
-              to="/signup"
-              className={styles.NavLink}
-              activeClassName={styles.Active}
-            >
-              <i className="fas fa-user-plus"></i>Sign up
-            </NavLink>
-            <NavLink
-              to="/yarns"
-              className={styles.NavLink}
-              activeClassName={styles.Active}
-            >
               <i className="fa-solid fa-book"></i>Gaming Yarns
             </NavLink>
             <NavLink
@@ -55,6 +64,7 @@ const NavBar = () => {
             >
               <i className="fa-solid fa-blog"></i>Blog
             </NavLink>
+            {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
       </Container>
