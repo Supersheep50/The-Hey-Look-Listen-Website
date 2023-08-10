@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 
-import Post from "./Post";
+import PodcastPost from "./PodcastPost";
 import Asset from "../../components/Asset";
 
 import appStyles from "../../App.module.css";
@@ -19,7 +19,7 @@ import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
-function PodcastPostPage({ message, filter = "" }) {
+function PodcastPostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
@@ -31,7 +31,7 @@ function PodcastPostPage({ message, filter = "" }) {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
+        const { data } = await axiosReq.get(`/podcastposts/?${filter}search=${query}`);
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
@@ -72,7 +72,7 @@ function PodcastPostPage({ message, filter = "" }) {
             {posts.results.length ? (
               <InfiniteScroll
                 children={posts.results.map((post) => (
-                  <Post key={post.id} {...post} setPosts={setPosts} />
+                  <PodcastPost key={post.id} {...post} setPosts={setPosts} />
                 ))}
                 dataLength={posts.results.length}
                 loader={<Asset spinner />}
@@ -98,4 +98,4 @@ function PodcastPostPage({ message, filter = "" }) {
   );
 }
 
-export default PodcastPostPage;
+export default PodcastPostsPage;

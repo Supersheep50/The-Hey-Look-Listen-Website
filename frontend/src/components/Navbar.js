@@ -38,6 +38,16 @@ const NavBar = () => {
     </NavLink>
   );
 
+  const addPodcastPostIcon = (
+    <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/podcastposts/create"
+    >
+      <i className="far fa-plus-square"></i>Add podcast post
+    </NavLink>
+  );
+
   const loggedOutIcons = (
     <>
       <NavLink
@@ -82,6 +92,8 @@ const NavBar = () => {
           </Navbar.Brand>
         </NavLink>
         {currentUser && addPostIcon}
+        {currentUser && addPodcastPostIcon}
+
         <Navbar.Toggle ref={ref} onClick={() => setExpanded(!expanded)}  aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left">
