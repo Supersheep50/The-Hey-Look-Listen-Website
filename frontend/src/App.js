@@ -19,6 +19,9 @@ import NotFound from "./components/NotFound";
 import PodcastPostCreateForm from "./pages/podcast-posts/PodcastPostCreateForm";
 import PodcastPostPage from "./pages/podcast-posts/PodcastPostPage";
 import PodcastPostEditForm from "./pages/podcast-posts/PodcastPostEditForm";
+import GamingYarns from './pages/gamingyarns/GamingYarns';
+
+
 
 
 
@@ -38,7 +41,7 @@ function App() {
           <Route exact path="/" render={() => <PodcastPostsPage />} />
           <Route exact path="/signin" render={() => < SignInForm />}/>
           <Route exact path="/signup" render={() => < SignUpForm />}/>
-          <Route exact path="/yarns" render={() => <h1>Gaming Yarns</h1>} />
+          <Route exact path="/gamingyarns" render={() => <GamingYarns />} />
           <Route
             exact
             path="/blog"

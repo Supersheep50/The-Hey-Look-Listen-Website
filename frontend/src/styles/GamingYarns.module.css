@@ -1,0 +1,46 @@
+.Stories {
+    display: flex;
+    overflow-x: scroll;
+    padding: 20px;
+  }
+  
+  .Story {
+    position: relative;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  
+  .Image {
+    max-height: 50vh;
+    width: auto;
+  }
+  
+  .StoryOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 8px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  
+  .StoryText {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* Additional styles for responsiveness */
+  @media (max-width: 768px) {
+    .Stories {
+      overflow-x: auto;
+      padding: 10px;
+    }
+  
+    .Story {
+      margin-right: 10px;
+    }
+  }

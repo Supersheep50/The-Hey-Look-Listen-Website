@@ -109,7 +109,7 @@ const NavBar = () => {
             <NavLink
               className={styles.NavLink}
               activeClassName={styles.Active}
-              to="/yarns"
+              to="/gamingyarns"
             >
               <i className="fa-solid fa-book"></i>Gaming Yarns
             </NavLink>
