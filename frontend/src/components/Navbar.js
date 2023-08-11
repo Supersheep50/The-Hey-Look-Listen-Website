@@ -111,7 +111,7 @@ const NavBar = () => {
               activeClassName={styles.Active}
               to="/gamingyarns"
             >
-              <i className="fa-solid fa-book"></i>Gaming Yarns
+              <i className="fa-solid fa-microphone"></i>Podcasts
             </NavLink>
 
             <NavLink
