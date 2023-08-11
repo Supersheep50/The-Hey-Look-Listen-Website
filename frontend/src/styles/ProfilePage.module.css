@@ -1,13 +1,24 @@
 .ProfileImage {
-    object-fit: cover;
-    height: 120px;
-    width: 120px;
-    margin: 4px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+  height: 120px;
+  width: 120px;
+  margin: 4px;
+}
+
+.ProfileImage:hover {
+  transform: scale(1.1);
+  border: 4px solid #007bff;
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2);
+}
+
+@media screen and (max-width: 991px) {
+  .ProfileImage {
+    width: 250px;
+    height: 250px;
+    margin: 8px;
   }
-  
-  @media screen and (max-width: 991px) {
-    .ProfileImage {
-      width: 250px;
-      height: 250px;
-    }
-  }
+}

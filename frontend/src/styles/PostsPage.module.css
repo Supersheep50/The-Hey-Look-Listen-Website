@@ -1,18 +1,40 @@
+.SearchBar {
+  position: relative;
+  margin: 16px 0; 
+}
+
 .SearchBar input {
-    border-radius: 20px;
-    color: #242a3d;
-    padding-left: 40px;
-    margin-bottom: 16px;
-  }
-  
-  .SearchIcon {
-    position: absolute;
-    font-size: 1.2rem;
-    padding: 9px;
-    padding-left: 15px;
-  }
-  
-  .SearchIcon:hover {
-    cursor: default;
-    color: #cfced3;
-  }
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  padding-left: 50px;
+  width: 100%;
+  color: #242a3d;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.SearchBar input:focus {
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.SearchIcon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: #cfced3;
+  transition: color 0.3s ease-in-out;
+}
+
+.SearchBar:hover .SearchIcon {
+  color: #555555;
+  cursor: pointer;
+}
+
+.SearchBar input::placeholder {
+  color: #999999;
+}
