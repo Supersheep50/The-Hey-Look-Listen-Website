@@ -9,13 +9,10 @@ import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutisdeToggle";
 import { removeTokenTimestamp } from "../utils/utils";
 
-
-
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
 
-  
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
   const handleSignOut = async () => {
@@ -38,7 +35,6 @@ const NavBar = () => {
     </NavLink>
   );
 
-  
   const loggedOutIcons = (
     <>
       <NavLink
@@ -55,11 +51,11 @@ const NavBar = () => {
       >
         <i className="fas fa-user-plus"></i>Sign up
       </NavLink>
-      </>
-  );  
+    </>
+  );
 
-  const loggedInIcons = (   
-    <>   
+  const loggedInIcons = (
+    <>
       <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
         <i className="fas fa-sign-out-alt"></i>Sign out
       </NavLink>
@@ -73,21 +69,34 @@ const NavBar = () => {
     </>
   );
 
-
   return (
     <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top">
       <Container>
-        <NavLink to="/">
+        <NavLink to="/" className={styles.LogoLink}>
           <Navbar.Brand>
             <img src={logo} alt="logo" height="55" />
           </Navbar.Brand>
         </NavLink>
+        <a
+          href="https://supersheep50.github.io/hey-look-listen-quiz/"
+          className={`${styles.NavLink} ${styles.ExternalLink}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          The HLL Quiz
+        </a>
+        <a
+          href="https://the-secret-of-the-hll-tomb.herokuapp.com/"
+          className={`${styles.NavLink} ${styles.ExternalLink}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          The Secret of the HLL Tomb
+        </a>
         {currentUser && addPostIcon}
-        <Navbar.Toggle ref={ref} onClick={() => setExpanded(!expanded)}  aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle ref={ref} onClick={() => setExpanded(!expanded)} aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left">
-           
-
             <NavLink
               className={styles.NavLink}
               activeClassName={styles.Active}
@@ -101,7 +110,7 @@ const NavBar = () => {
               activeClassName={styles.Active}
               to="/"
             >
-              <i class="fa-solid fa-book"></i>Gaming Yarns
+              <i className="fa-solid fa-book"></i>Gaming Yarns
             </NavLink>
             <NavLink
               to="/blog"

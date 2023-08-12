@@ -50,7 +50,7 @@ const episodes = [
   // Add more episodes here
 ];
 
-const GamingYarns = () => {
+const Podcasts = () => {
   return (
     <div className={styles.episodeContainer}>
       {episodes.slice().reverse().map((episode, index) => (
@@ -70,4 +70,4 @@ const GamingYarns = () => {
   );
 };
 
-export default GamingYarns;
+export default Podcasts;

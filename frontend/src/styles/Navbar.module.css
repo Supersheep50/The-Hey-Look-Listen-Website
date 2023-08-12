@@ -2,16 +2,18 @@
   background-color: #ffffff;
   border: 1px solid #dadadf;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .NavLink {
+  display: flex;
+  align-items: center;
   padding: 10px;
   text-decoration: none;
   color: #333;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -20,10 +22,22 @@
   color: #007bff;
 }
 
+.NavLink:hover i {
+  color: #007bff; /* Change icon color on hover */
+}
+
+.NavLink:hover span {
+  color: #007bff; /* Change text color on hover */
+}
+
 .Active .NavLink {
   color: #007bff;
 }
 
 .Active i {
   color: #000;
+}
+
+.LogoLink {
+  padding: 0;
 }
