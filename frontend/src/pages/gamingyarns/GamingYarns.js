@@ -1,73 +1,25 @@
 import React from 'react';
 import styles from '../../styles/GamingYarns.module.css';
 
-const episodes = [
-  {
-    url: 'https://open.spotify.com/embed/show/1qWCjKkHILrRLscI33N0v7?utm_source=generator',
-    title: 'Episode 1: Introduction to Gaming Yarns',
-    bio: 'In this introductory episode, we discuss the concept behind Gaming Yarns and what to expect from future episodes.'
-  },
-  {
-    url: 'https://open.spotify.com/embed/episode/4WdxPGqx7PHbAB3g0MGWKE?utm_source=generator',
-    title: 'Episode 2: Exploring Virtual Realities',
-    bio: 'Join us as we dive into the world of virtual reality gaming, exploring its evolution, popular titles, and potential future developments.'
-  },
-  {
-    url: 'https://open.spotify.com/embed/episode/4WdxPGqx7PHbAB3g0MGWKE?utm_source=generator',
-    title: 'Episode 2: Exploring Virtual Realities',
-    bio: 'Join us as we dive into the world of virtual reality gaming, exploring its evolution, popular titles, and potential future developments.'
-  },
-  {
-    url: 'https://open.spotify.com/embed/episode/4WdxPGqx7PHbAB3g0MGWKE?utm_source=generator',
-    title: 'Episode 2: Exploring Virtual Realities',
-    bio: 'Join us as we dive into the world of virtual reality gaming, exploring its evolution, popular titles, and potential future developments.'
-  },
-  {
-    url: 'https://open.spotify.com/embed/episode/4WdxPGqx7PHbAB3g0MGWKE?utm_source=generator',
-    title: 'Episode 2: Exploring Virtual Realities',
-    bio: 'Join us as we dive into the world of virtual reality gaming, exploring its evolution, popular titles, and potential future developments.'
-  },
-  {
-    url: 'https://open.spotify.com/embed/episode/4WdxPGqx7PHbAB3g0MGWKE?utm_source=generator',
-    title: 'Episode 2: Exploring Virtual Realities',
-    bio: 'Join us as we dive into the world of virtual reality gaming, exploring its evolution, popular titles, and potential future developments.'
-  },
-  {
-    url: 'https://open.spotify.com/embed/episode/4WdxPGqx7PHbAB3g0MGWKE?utm_source=generator',
-    title: 'Episode 2: Exploring Virtual Realities',
-    bio: 'Join us as we dive into the world of virtual reality gaming, exploring its evolution, popular titles, and potential future developments.'
-  },
-  {
-    url: 'https://open.spotify.com/embed/episode/4WdxPGqx7PHbAB3g0MGWKE?utm_source=generator',
-    title: 'Episode 2: Exploring Virtual Realities',
-    bio: 'Join us as we dive into the world of virtual reality gaming, exploring its evolution, popular titles, and potential future developments.'
-  },
-  {
-    url: 'https://open.spotify.com/embed/episode/4WdxPGqx7PHbAB3g0MGWKE?utm_source=generator',
-    title: 'Episode 2: Exploring Virtual Realities',
-    bio: 'Join us as we dive into the world of virtual reality gaming, exploring its evolution, popular titles, and potential future developments.'
-  },
-  // Add more episodes here
+const images = [
+  'https://res.cloudinary.com/dufx1rlrw/image/upload/v1691829711/Gaming_Yarns_1_ideto1.jpg',
+  'https://res.cloudinary.com/dufx1rlrw/image/upload/v1691829711/Gaming_Yarns_2_dr1gph.jpg',
+  'https://res.cloudinary.com/dufx1rlrw/image/upload/v1691829711/Gaming_Yarns_3_vjahsh.jpg',
+  'https://res.cloudinary.com/dufx1rlrw/image/upload/v1691829711/Gaming_Yarns_4_uapuxy.jpg',
+  'https://res.cloudinary.com/dufx1rlrw/image/upload/v1691829711/Gaming_Yarns_5_ytr7u9.jpg',
+ 
 ];
 
-const GamingYarns = () => {
+const ImageGallery = () => {
   return (
-    <div className={styles.episodeContainer}>
-      {episodes.slice().reverse().map((episode, index) => (
-        <div key={index} className={styles.episodeCard}>
-          <h3 className={styles.episodeTitle}>{episode.title}</h3>
-          <iframe
-            src={episode.url}
-            className={styles.episodeFrame}
-            title={`Episode ${index + 1}`}
-            allowtransparency="true"
-            allow="encrypted-media"
-          ></iframe>
-          <p className={styles.episodeBio}>{episode.bio}</p>
+    <div className={styles.galleryContainer}>
+      {images.map((image, index) => (
+        <div key={index} className={styles.imageCard}>
+          <img src={image} alt={`Image ${index + 1}`} className={styles.image} />
         </div>
       ))}
     </div>
   );
 };
 
-export default GamingYarns;
+export default ImageGallery;

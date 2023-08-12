@@ -83,8 +83,6 @@ const NavBar = () => {
           </Navbar.Brand>
         </NavLink>
         {currentUser && addPostIcon}
-        {currentUser && addPodcastPostIcon}
-
         <Navbar.Toggle ref={ref} onClick={() => setExpanded(!expanded)}  aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left">
@@ -93,7 +91,7 @@ const NavBar = () => {
             <NavLink
               className={styles.NavLink}
               activeClassName={styles.Active}
-              to="/gamingyarns"
+              to="/podcasts"
             >
               <i className="fa-solid fa-microphone"></i>Podcasts
             </NavLink>
@@ -103,7 +101,7 @@ const NavBar = () => {
               activeClassName={styles.Active}
               to="/"
             >
-              <i className="fa-solid fa-microphone"></i>Gaming Yarns
+              <i class="fa-solid fa-book"></i>Gaming Yarns
             </NavLink>
             <NavLink
               to="/blog"

@@ -8,7 +8,6 @@ import SignInForm from "./pages/auth/SignInForm";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
 import PostsPage from "./pages/posts/PostsPage";
-import PodcastPostsPage from "./pages/podcast-posts/PodcastPostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
@@ -16,10 +15,8 @@ import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import NotFound from "./components/NotFound";
-import PodcastPostCreateForm from "./pages/podcast-posts/PodcastPostCreateForm";
-import PodcastPostPage from "./pages/podcast-posts/PodcastPostPage";
-import PodcastPostEditForm from "./pages/podcast-posts/PodcastPostEditForm";
-import GamingYarns from './pages/gamingyarns/GamingYarns';
+import Podcasts from './pages/podcasts/Podcasts';
+import GamingYarns from "./pages/gamingyarns/GamingYarns";
 
 
 
@@ -38,10 +35,10 @@ function App() {
       <NavBar />
       <Container className={styles.Main}>
         <Switch>
-          <Route exact path="/" render={() => <PodcastPostsPage />} />
+          <Route exact path="/" render={() => <GamingYarns />}/>
           <Route exact path="/signin" render={() => < SignInForm />}/>
           <Route exact path="/signup" render={() => < SignUpForm />}/>
-          <Route exact path="/gamingyarns" render={() => <GamingYarns />} />
+          <Route exact path="/podcasts" render={() => <Podcasts />} />
           <Route
             exact
             path="/blog"
@@ -68,10 +65,6 @@ function App() {
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
           />
-          
-          <Route exact path="/podcastposts/create" render={() => <PodcastPostCreateForm />} />
-          <Route exact path="/podcastposts/:id" render={() => <PodcastPostPage />} /> 
-          <Route exact path="/podcastposts/:id/edit" render={() => <PodcastPostEditForm />} />   
           <Route render={() => <NotFound />} />
         </Switch>
       </Container>
