@@ -34,20 +34,11 @@ const NavBar = () => {
       activeClassName={styles.Active}
       to="/posts/create"
     >
-      <i className="far fa-plus-square"></i>Add blog post
+      <i className="far fa-plus-square"></i>Add HLL forum post
     </NavLink>
   );
 
-  const addPodcastPostIcon = (
-    <NavLink
-      className={styles.NavLink}
-      activeClassName={styles.Active}
-      to="/podcastposts/create"
-    >
-      <i className="far fa-plus-square"></i>Add podcast post
-    </NavLink>
-  );
-
+  
   const loggedOutIcons = (
     <>
       <NavLink
@@ -97,14 +88,7 @@ const NavBar = () => {
         <Navbar.Toggle ref={ref} onClick={() => setExpanded(!expanded)}  aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left">
-            <NavLink
-              exact
-              className={styles.NavLink}
-              activeClassName={styles.Active}
-              to="/"
-            >
-              <i className="fa-solid fa-microphone"></i>Home
-            </NavLink>
+           
 
             <NavLink
               className={styles.NavLink}
@@ -113,13 +97,20 @@ const NavBar = () => {
             >
               <i className="fa-solid fa-microphone"></i>Podcasts
             </NavLink>
-
+            <NavLink
+              exact
+              className={styles.NavLink}
+              activeClassName={styles.Active}
+              to="/"
+            >
+              <i className="fa-solid fa-microphone"></i>Gaming Yarns
+            </NavLink>
             <NavLink
               to="/blog"
               className={styles.NavLink}
               activeClassName={styles.Active}
             >
-              <i className="fa-solid fa-blog"></i>Blog
+              <i className="fa-solid fa-blog"></i>Forum
             </NavLink>
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
