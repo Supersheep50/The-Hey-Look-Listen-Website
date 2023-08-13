@@ -43,7 +43,7 @@ function App() {
             exact
             path="/blog"
             render={() => (
-              <PostsPage message="No results found. Adjust the search keyword." />
+              <PostsPage message="Nothing here pal. Adjust the search keyword." />
             )}
           />
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />

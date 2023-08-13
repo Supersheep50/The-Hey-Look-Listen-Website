@@ -129,7 +129,7 @@ function ProfilePage() {
       ) : (
         <Asset
           src={NoResults}
-          message={`No results found, ${profile?.owner} hasn't posted yet.`}
+          message={`Nothing here pal, ${profile?.owner} hasn't posted yet.`}
         />
       )}
     </>
