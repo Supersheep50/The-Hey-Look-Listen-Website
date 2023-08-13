@@ -31,7 +31,7 @@ const NavBar = () => {
       activeClassName={styles.Active}
       to="/posts/create"
     >
-      <i className="far fa-plus-square"></i>Add HLL forum post
+      <i className="far fa-plus-square"></i>Add forum post
     </NavLink>
   );
 
@@ -70,60 +70,64 @@ const NavBar = () => {
   );
 
   return (
-    <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top">
-      <Container>
-        <NavLink to="/" className={styles.LogoLink}>
-          <Navbar.Brand>
-            <img src={logo} alt="logo" height="55" />
-          </Navbar.Brand>
-        </NavLink>
-        <a
-          href="https://supersheep50.github.io/hey-look-listen-quiz/"
-          className={`${styles.NavLink} ${styles.ExternalLink}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          The HLL Quiz
-        </a>
-        <a
-          href="https://the-secret-of-the-hll-tomb.herokuapp.com/"
-          className={`${styles.NavLink} ${styles.ExternalLink}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          The Secret of the HLL Tomb
-        </a>
-        {currentUser && addPostIcon}
-        <Navbar.Toggle ref={ref} onClick={() => setExpanded(!expanded)} aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto text-left">
-            <NavLink
-              className={styles.NavLink}
-              activeClassName={styles.Active}
-              to="/podcasts"
-            >
-              <i className="fa-solid fa-microphone"></i>Podcasts
-            </NavLink>
-            <NavLink
-              exact
-              className={styles.NavLink}
-              activeClassName={styles.Active}
-              to="/"
-            >
-              <i className="fa-solid fa-book"></i>Gaming Yarns
-            </NavLink>
-            <NavLink
-              to="/blog"
-              className={styles.NavLink}
-              activeClassName={styles.Active}
-            >
-              <i className="fa-solid fa-blog"></i>Forum
-            </NavLink>
-            {currentUser ? loggedInIcons : loggedOutIcons}
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <>
+      <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top">
+        <Container>
+          {/* Updated NavLink around the logo */}
+          <NavLink to="/podcasts" className={styles.LogoLink}>
+            <Navbar.Brand>
+              <img src={logo} alt="logo" height="110" /> {/* Increased logo height */}
+            </Navbar.Brand>
+          </NavLink>
+          <a
+            href="https://supersheep50.github.io/hey-look-listen-quiz/"
+            className={`${styles.NavLink} ${styles.ExternalLink} ${styles.BoldLink}`} // Added BoldLink class
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            HLL Quiz
+          </a>
+          <a
+            href="https://the-secret-of-the-hll-tomb.herokuapp.com/"
+            className={`${styles.NavLink} ${styles.ExternalLink} ${styles.BoldLink}`} // Added BoldLink class
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            HLL Tomb
+          </a>
+          {currentUser && addPostIcon}
+          <Navbar.Toggle ref={ref} onClick={() => setExpanded(!expanded)} aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className={`ml-auto text-left ${styles.SpacedLinks}`}>
+              <NavLink
+                className={styles.NavLink}
+                activeClassName={styles.Active}
+                to="/podcasts"
+              >
+                <i className="fa-solid fa-microphone"></i>Podcasts
+              </NavLink>
+              <NavLink
+                exact
+                className={styles.NavLink}
+                activeClassName={styles.Active}
+                to="/"
+              >
+                <i className="fa-solid fa-book"></i>Yarns
+              </NavLink>
+              <NavLink
+                to="/blog"
+                className={styles.NavLink}
+                activeClassName={styles.Active}
+              >
+                <i className="fa-solid fa-blog"></i>Forum
+              </NavLink>
+              {currentUser ? loggedInIcons : loggedOutIcons}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      <div className={styles.NavBarSpacer}></div> {/* Added Spacer */}
+    </>
   );
 };
 

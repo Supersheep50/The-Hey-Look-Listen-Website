@@ -18,16 +18,15 @@
   transition: color 0.3s ease;
 }
 
-.NavLink:hover {
+.NavLink:hover,
+.LogoLink:hover img {
   color: #007bff;
+  font-size: 18px;
+  text-decoration: none; 
 }
 
-.NavLink:hover i {
-  color: #007bff; /* Change icon color on hover */
-}
-
-.NavLink:hover span {
-  color: #007bff; /* Change text color on hover */
+.LogoLink:hover img {
+  transform: scale(1.1);
 }
 
 .Active .NavLink {
@@ -41,3 +40,22 @@
 .LogoLink {
   padding: 0;
 }
+
+.ExternalLink {
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.SpacedLinks {
+  gap: 20px;
+}
+
+.BoldLink {
+  font-weight: bold;
+}
+
+.NavBarSpacer {
+  height: 60px;
+}
+
+
