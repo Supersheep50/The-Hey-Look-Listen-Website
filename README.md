@@ -20,10 +20,10 @@ In the planning stage of this project, I created basic wireframes for desktop an
 
 ## User Stories
 
-I have divided the functionality of the site and database into epics and user stories below. These are also documented on my GitHub Project board found [here]().
+I have divided the functionality of the site and database into epics and user stories below. These are also documented on my GitHub Project board found [here](https://github.com/users/Supersheep50/projects/5).
 
 This is the view at the end of my project:
-![Final view of user stories](src/assets/readme/project-board.png)
+![Final view of user stories](frontend/src/assets/github-projects-final%20.jpg)
 
 All user stories marked 'Must Have' have been completed, and some 'Should Have' user stories are still to be completed. The site functions without these, but they should be implemented in future sprints to create a better user experience.
 
@@ -31,18 +31,17 @@ All user stories marked 'Must Have' have been completed, and some 'Should Have' 
 
 **User Stories:**
 
-- As a **user** I can **sign up for an account** so that I can **make and like posts, and add games**
+- As a **user** I can **sign up for an account** so that I can **make and like forum posts**
 - As a **user** I can **log in and out of my account** so that I can **access the site from different devices and keep my account secure**
 - As a **user** I can **add a profile photo and description** so that **I can personalise my profile**
-- As a **user** I can **request to reset my password via email** so that **I can log back in to my account if I forget my login details**
-- As a **user** I can **delete my profile** so that **my personal details are not saved if I don't want to use the site anymore**
+- As a **user** I can **edit my username, change my password and username** to keep **my personal details safe and secure**
 
 ### **Epic:** Managing Posts
 
 **User Stories:**
 
-- As a **user** I can **add a new post** so that **I can show when I start playing a game**
-- As a **user** I can **edit my posts** so that **I can make updates, or mark when I have finished playing the game**
+- As a **user** I can **add a new post** so that **I can talk about my favorite podcast epsidoes**
+- As a **user** I can **edit my posts** so that **I can make changes after listening to episodes or rading comments**
 - As a **user** I can **delete my posts** so that **I can remove posts made in error, or that I don't want displayed on my profile anymore**
 - As a **user** I can **like and unlike other users' posts** so that **I can engage with content that I enjoy**
 
@@ -54,21 +53,12 @@ All user stories marked 'Must Have' have been completed, and some 'Should Have' 
 - As a **user** I can **edit comments I have made** so that **I can correct mistakes in my comments**
 - As a **user** I can **delete comments I have made** so that **I can remove comments posted by mistake**
 
-### **Epic:** Managing Games
-
-**User Stories:**
-
-- As a **user** I can **request to add a new game to the site's database** so that **I can leave reviews and share the game on my profile**
-- As a **user** I can **request edits to an existing game** so that **the information on the site is correct**
-- As a **user** I can **add a review to a game** so that **I can share my thoughts on the game with other users**
-- As a **user** I can **edit or delete my own reviews** so that **I can fix errors or change my review if my opinions change**
-- As a **user** I can **like other users' reviews** so that **I can engage with other reviews I agree with**
 
 ### **Epic:** Admin Capabilities
 
 **User Stories:**
 
-- As a **site admin** I can **add, edit, and delete games from the database** so that **users have the most up-to-date list of games to choose from**
+- As a **site admin** I can **add, edit, and delete profiles from the database** so that **users have the most up-to-date list of games to choose from**
 - As a **site admin** I can **remove posts or comments if they are not appropriate or relevant** so that **the site is enjoyable and accessible to all users**
 - As a **site admin** I can **see lists of all user profiles, posts, games, reviews, likes, and comments** so that **I have an overview of all activity on the site**
 
@@ -78,68 +68,47 @@ All user stories marked 'Must Have' have been completed, and some 'Should Have' 
 
 - **Navigation Bar**
 
-  - The navigation bar appears across all pages of the application, and the icons that appear depend on whether the user is logged in or out. Below is the view for a logged in user. A logged out user will only see 'Sign In' or 'Sign Up' options.
-    ![Navbar](src/assets/readme/navbar.png)
+  - The navigation bar appears across all pages of the application, and the icons that appear depend on whether the user is logged in or out. Below is the view for a logged in user. 
+    ![Navbar](frontend/src/assets/nav-bar.jpg)
+    ![Navbar Logged out](frontend/src/assets/nav-bar-logged-out.jpg)
 
-- **Splash Page**
 
-  - The home page functions as a splash page, with a brief introduction to the site, and an image that ties into the theme (video games). Because the site's functionality requires a user to be logged in, it also includes a prompt to log in or create an account.
-    ![Splash page](src/assets/readme/splashpage.png)
+- **Podcast Page**
 
-- **Game**
+  - The Podcast Page showcases all the episodes of the HLL podcast with updates every 2 weeks. Users can listen to epiosdes here if they like or click the player and be brought to the HLL Spotify page.
+    ![Podcast page](frontend/src/assets/podcasts-page.jpg)
+    
 
-  - A user can either track or leave a review for a game. Any user can add a game to the database if it does not already exist, but only an admin can edit or delete the game - this is due to the fact that editing or deleting a game will affect all users who have tracked that game themselves. I did not want to give any user the ability to edit another user's posts via the game component. The game component includes the game's title, a photo, and a desription of the game. Users can interact with the game by liking it or adding a review.
-    ![Game](src/assets/readme/game.png)
+- **Add a post**
 
-- **Review**
+  - A user can add a post to the HLL forum here. Clicking the button gives users the ability to add an episode title, a photo and some text. A similiar approach to Reddits forum pages.
+    ![Post](frontend/src/assets/add-post.jpg)
+    ![Podcast page](frontend/src/assets/podcasts-page.jpg)
 
-  - Users can leave a review for a game. There is a form beneath each game, prompting the user to choose a star rating and leave their comments. Reviews are displayed with the user's profile photo, a link to their profile, and a time stamp showing the date & time the review was left.
-    ![Review](src/assets/readme/review.png)
+- **Gaming Yarns**
 
-- **Post**
+  - Users can check out HLL's collection of Gaming Yarns. Short stories about relatively unknown games. 
+    ![Yarns](frontend/src/assets/yarns-page.jpg)
 
-  - A user creates a post in order to track a specific game. They can share whether they are currently playing it, or whether they have finished it. A time stamp is automatically added to reflect when the user last updated the status. Users can also add notes to their posts, and other users can interact with likes or by adding comments.
-    ![Post](src/assets/readme/post.png)
+- **Forum**
+
+  - The forum is where Users posts about the Podcast get posted. Here they can view other Users posts and comment and like.
+    ![Forum](frontend/src/assets/forum-page.jpg)
 
 - **Comment**
 
   - A user can leave a comment on a post. There is a form beneath each post with a free text box. Comments are displayed with the user's profile photo, a link to their profile, and a time stamp showing the date & time the comment was left.
-    ![Comment](src/assets/readme/comment.png)
-
-- **Add Game Form**
-
-  - If a game does not already exist in the site's database, a user can add it. They will be prompted to select a photo, and add the title and game's descriptions. These games will then be accessible by all users of the site, and will be able to be tracked and reviewed by any user.
-    ![Add game form](src/assets/readme/addgame.png)
-
-- **Track Game Form**
-
-  - When a user tracks a game, it creates a post on the main feed, and in their 'My Games' section. This form prompts the user to select a game from a dropdown menu, listing all the games in the database. If the game doesn't exist, the user is prompted to add it themselves via the Add Game form. If the game does exist, they can select whether they are currently playing the game or have completed it, and add any notes / thoughts in the free text field.
-    ![Track game form](src/assets/readme/addpost.png)
-
-- **Feed**
-
-  - The 'feed' section of the site shows all posts made by all users. The layout is the same across all three main pages of the application (feed, my games, and all games) to ensure visual and stylistic consistency, and ease of navigation. The feed is searchable by game title.
-    ![Feed](src/assets/readme/feed.png)
-
-- **My Games**
-
-  - The 'My Games' section of the site shows all the games that the logged in user has tracked. This will display all the user's own posts, including any notes, and whether they have completed or are currently playing the game. The posts are searchable by game title.
-    ![My games](src/assets/readme/mygames.png)
-
-- **All Games**
-
-  - The 'All Games' section of the site displays a list of all the games in the database. The list is searchable by game title via a search bar at the top of the page, and users also have the option to add a game if it's not there.
-    ![All games](src/assets/readme/allgames.png)
+    ![Comment](frontend/src/assets/comments-box.jpg)
 
 - **Sign In Page**
 
   - The sign in page allows an existing user to sign in to the site. There is a prompt redirecting the user to the sign up page if they don't already have an account. The layout for the sign in and sign up pages are both the same for visual / stylistic consistency.
-    ![Sign in page](src/assets/readme/signin.png)
+    ![Sign in page](frontend/src/assets/sign-in-page.jpg)
 
 - **Sign Up Page**
 
   - As above, the sign up page allows a user to create a new account. There is a prompt redirecting the user to the sign in page if they already have an account.
-    ![Sign up page](src/assets/readme/signup.png)
+    ![Sign up page](frontend/src/assets/sign-up-page.jpg)
 
 - **Profile Page**
   - The profile page allows a user to view their own or another user's profile. Users can edit their own profile by adding an image and/or a bio. The page also displays the number posts and reviews that a user has created, and shows a feed of their posts below this data.
