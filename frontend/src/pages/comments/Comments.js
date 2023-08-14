@@ -9,6 +9,8 @@ import styles from "../../styles/Comment.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
 
+// Code adapted from Code Institute walkthrough
+
 const Comment = (props) => {
   const {
     profile_id,

@@ -9,6 +9,9 @@ import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutisdeToggle";
 import { removeTokenTimestamp } from "../utils/utils";
 
+
+// Code adapted from Code Institute walkthrough
+
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
@@ -73,15 +76,15 @@ const NavBar = () => {
     <>
       <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top">
         <Container>
-          {/* Updated NavLink around the logo */}
+       
           <NavLink to="/podcasts" className={styles.LogoLink}>
             <Navbar.Brand>
-              <img src={logo} alt="logo" height="110" /> {/* Increased logo height */}
+              <img src={logo} alt="logo" height="110" /> 
             </Navbar.Brand>
           </NavLink>
           <a
             href="https://supersheep50.github.io/hey-look-listen-quiz/"
-            className={`${styles.NavLink} ${styles.ExternalLink} ${styles.BoldLink}`} // Added BoldLink class
+            className={`${styles.NavLink} ${styles.ExternalLink} ${styles.BoldLink}`} 
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -89,7 +92,7 @@ const NavBar = () => {
           </a>
           <a
             href="https://the-secret-of-the-hll-tomb.herokuapp.com/"
-            className={`${styles.NavLink} ${styles.ExternalLink} ${styles.BoldLink}`} // Added BoldLink class
+            className={`${styles.NavLink} ${styles.ExternalLink} ${styles.BoldLink}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -126,7 +129,7 @@ const NavBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div className={styles.NavBarSpacer}></div> {/* Added Spacer */}
+      <div className={styles.NavBarSpacer}></div> 
     </>
   );
 };

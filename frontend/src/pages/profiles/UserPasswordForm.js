@@ -14,6 +14,8 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
+// Code adapted from Code Institute walkthrough
+
 const UserPasswordForm = () => {
   const history = useHistory();
   const { id } = useParams();

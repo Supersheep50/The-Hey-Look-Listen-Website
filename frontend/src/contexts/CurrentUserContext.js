@@ -4,6 +4,9 @@ import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { useHistory } from "react-router";
 import { removeTokenTimestamp, shouldRefreshToken } from "../utils/utils";
 
+
+// Code adapted from Code Institute walkthrough
+
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
 

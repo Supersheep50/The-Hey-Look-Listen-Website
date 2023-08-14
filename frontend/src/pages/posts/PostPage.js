@@ -18,6 +18,8 @@ import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 
+// Code adapted from Code Institute walkthrough
+
 function PostPage() {
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });

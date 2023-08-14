@@ -6,7 +6,7 @@
     overflow-y: hidden;
     padding: 20px;
     align-items: center;
-    justify-content: center; /* Add this line */
+    justify-content: center; 
     margin: 0 auto;
   }
   

@@ -19,15 +19,9 @@ import Podcasts from './pages/podcasts/Podcasts';
 import GamingYarns from "./pages/gamingyarns/GamingYarns";
 
 
-
-
-
-
 function App() {
   const currentUser = useCurrentUser();
   const profile_id = currentUser?.profile_id || "";
-
- 
 
   return (
    

@@ -15,6 +15,8 @@ import btnStyles from "../../styles/Button.module.css";
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
+// Code adapted from Code Institute walkthrough
+
 function PostEditForm() {
   const [errors, setErrors] = useState({});
 

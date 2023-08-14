@@ -22,7 +22,6 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html')),
     path('admin/', admin.site.urls),
     path('api/api-auth/', include('rest_framework.urls')),
-    # our logout route has to be above the default one to be matched first
     path('api/dj-rest-auth/logout/', logout_route),
     path('api/dj-rest-auth/', include('dj_rest_auth.urls')),
     path(

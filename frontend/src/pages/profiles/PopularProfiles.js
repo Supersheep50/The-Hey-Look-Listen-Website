@@ -6,9 +6,11 @@ import Asset from "../../components/Asset";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Profile from "./Profile";
 
+// Code adapted from Code Institute walkthrough
+
 const PopularProfiles = ({ mobile }) => {
   const [profileData, setProfileData] = useState({
-    // we will use the pageProfile later!
+   
     pageProfile: { results: [] },
     popularProfiles: { results: [] },
   });

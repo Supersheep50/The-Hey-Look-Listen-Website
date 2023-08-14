@@ -7,6 +7,8 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
 
+// Code adapted from Code Institute walkthrough
+
 const Post = (props) => {
   const {
     id,

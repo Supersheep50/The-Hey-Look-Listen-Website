@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "../styles/Avatar.module.css";
 
+// Code adapted from Code Institute walkthrough
+
+
 const Avatar = ({ src, height = 45, text }) => {
   return (
     <span>

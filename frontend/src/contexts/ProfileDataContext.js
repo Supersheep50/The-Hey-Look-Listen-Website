@@ -3,6 +3,9 @@ import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 import { followHelper, unfollowHelper } from "../utils/utils";
 
+
+// Code adapted from Code Institute walkthrough
+
 const ProfileDataContext = createContext();
 const SetProfileDataContext = createContext();
 
@@ -11,7 +14,7 @@ export const useSetProfileData = () => useContext(SetProfileDataContext);
 
 export const ProfileDataProvider = ({ children }) => {
   const [profileData, setProfileData] = useState({
-    // we will use the pageProfile later!
+   
     pageProfile: { results: [] },
     popularProfiles: { results: [] },
   });

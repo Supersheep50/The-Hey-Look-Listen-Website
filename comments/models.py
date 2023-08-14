@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from posts.models import Post
 
 
-
 class Comment(models.Model):
     """
     Code adapted from Code Institute
