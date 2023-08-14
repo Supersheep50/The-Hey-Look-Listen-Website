@@ -111,8 +111,12 @@ All user stories marked 'Must Have' have been completed, and some 'Should Have' 
     ![Sign up page](frontend/src/assets/sign-up-page.jpg)
 
 - **Profile Page**
-  - The profile page allows a user to view their own or another user's profile. Users can edit their own profile by adding an image and/or a bio. The page also displays the number posts and reviews that a user has created, and shows a feed of their posts below this data.
-    ![Profile page](src/assets/readme/profile.png)
+  - The profile page allows a user to view their own or another user's profile. Users can edit their own profile by adding an image and/or a bio. The page also displays the number of posts, followers and how many users they are following. It also shows a feed for their posts.
+    ![Profile page](frontend/src/assets/profile-page.jpg)
+
+- **Exisiting HLL Projects**
+  - The Navbar showcases two links to exisiting HLL projects, The HLL Quiz and The Secret of the HLL Tomb.
+    ![Exisiting projects](frontend/src/assets/exisitng-projects.jpg)
 
 ### Features To Be Implemented
 
