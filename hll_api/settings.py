@@ -87,7 +87,6 @@ INSTALLED_APPS = [
     'dj_rest_auth.registration',
     'corsheaders',
     'profiles',
-    'podcastposts',
     'posts',
     'comments',
     'likes',
