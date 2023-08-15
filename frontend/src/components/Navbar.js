@@ -90,14 +90,7 @@ const NavBar = () => {
           >
             HLL Quiz
           </a>
-          <a
-            href="https://the-secret-of-the-hll-tomb.herokuapp.com/"
-            className={`${styles.NavLink} ${styles.ExternalLink} ${styles.BoldLink}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            HLL Tomb
-          </a>
+         
           {currentUser && addPostIcon}
           <Navbar.Toggle ref={ref} onClick={() => setExpanded(!expanded)} aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
