@@ -7,6 +7,9 @@ from likes.serializers import LikeSerializer
 """
 Code adapted from Code Institute
 """
+"""
+Likes view
+"""
 
 class LikeList(generics.ListCreateAPIView):
     

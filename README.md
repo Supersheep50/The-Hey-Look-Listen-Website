@@ -69,13 +69,11 @@ This is the view at the end of my project:
     ![Navbar](frontend/src/assets/nav-bar.jpg)
     ![Navbar Logged out](frontend/src/assets/nav-bar-logged-out.jpg)
 
-
 - **Podcast Page**
 
   - The Podcast Page showcases all the episodes of the HLL podcast with updates every 2 weeks. Users can listen to epiosdes here if they like or click the player and be brought to the HLL Spotify page.
     ![Podcast page](frontend/src/assets/podcasts-page.jpg)
     
-
 - **Add a post**
 
   - A user can add a post to the HLL forum here. Clicking the button gives users the ability to add an episode title, a photo and some text. A similiar approach to Reddits forum pages.
@@ -87,7 +85,6 @@ This is the view at the end of my project:
   - A user can also edit or delete a Post. 
     ![Delete Post](frontend/src/assets/delete-a-post.jpg)
     
-
 - **Gaming Yarns**
 
   - Users can check out HLL's collection of Gaming Yarns. Short stories about relatively unknown games. 
@@ -103,6 +100,11 @@ This is the view at the end of my project:
   - A user can leave a comment on a post. There is a form beneath each post with a free text box. Comments are displayed with the user's profile photo, a link to their profile, and a time stamp showing the date & time the comment was left.
     ![Comment](frontend/src/assets/comments-box.jpg)
 
+- **Delete a comment**
+
+  - A user can also edit or delete a Comment. 
+    ![Delete Comment](frontend/src/assets/delete-comment.jpg)
+      
 - **Sign In Page**
 
   - The sign in page allows an existing user to sign in to the site. There is a prompt redirecting the user to the sign up page if they don't already have an account. The layout for the sign in and sign up pages are both the same for visual / stylistic consistency.
@@ -117,6 +119,11 @@ This is the view at the end of my project:
   - The profile page allows a user to view their own or another user's profile. Users can edit their own profile by adding an image and/or a bio. The page also displays the number of posts, followers and how many users they are following. It also shows a feed for their posts.
     ![Profile page](frontend/src/assets/profile-page.jpg)
 
+- **Followers**
+
+  - Users can follow and unfollow each other. The top fans of the podcast are displayed on the Forum page. 
+    ![Followers](frontend/src/assets/followers.jpg)
+      
 - **Exisiting HLL Projects**
   - The Navbar showcases two links to exisiting HLL projects, The HLL Quiz and The Secret of the HLL Tomb.
     ![Exisiting projects](frontend/src/assets/exisitng-projects.jpg)
@@ -126,7 +133,7 @@ This is the view at the end of my project:
 Features that were outside the scope of this project, but that will be added in future sprints:
 
 - I had hoped to include videoplay for our Youtube channel but sadly ran out of time.
-- The ability to also up vote or down vote podcast episodes would be a col feature.
+- The ability to also up vote or down vote podcast episodes would be a cool feature.
 
 ## Testing
 
@@ -205,11 +212,18 @@ Welcome to the DRF API for The Hey! Look! Listen! Website.
 
 Hey! Look! Listen! is a website where you can check out the latest podcasts and gaming content from HLL. Users are able to create a profile and post photos on the Forum page. They can also like and comment on other users posts.
 
-This is the backend API database, built with Django REST Framework.
-
-- The deployed version of the API is [HERE](https://goodgames-drf-api.herokuapp.com/).
 - The deployed version of the full site built in React is [HERE](https://goodgames-react.herokuapp.com/).
-- The frontend repository is [HERE](https://github.com/StephHjar/goodgames-react).
+
+
+## Features
+
+### Existing Features
+
+- **Navigation Bar**
+
+  - The backend of the project can be accessed via the Django admin panel. Here the only admin superuser (JM) can make changes to comments, likes, posts, profiles and followers. This is an element of defensive design so other users cant access it.
+    ![Admin panel](frontend/src/assets/admin-panel.jpg)
+   
 
 ## User Stories
 

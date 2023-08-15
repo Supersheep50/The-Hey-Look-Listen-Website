@@ -7,6 +7,9 @@ from .serializers import FollowerSerializer
 Code adapted from Code Institute walkthrough
 """
 
+"""
+Followers view
+"""
 class FollowerList(generics.ListCreateAPIView):
     
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]

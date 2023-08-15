@@ -5,6 +5,9 @@ from django.contrib.auth.models import User
 Code adapted from Code Institute
 """
 
+"""
+Followers model
+"""
 class Follower(models.Model):
  
     owner = models.ForeignKey(

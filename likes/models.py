@@ -7,6 +7,9 @@ from posts.models import Post
 Code adapted from Code Institute
 """
 
+"""
+Likes model
+"""
 class Like(models.Model):
 
     owner = models.ForeignKey(User, on_delete=models.CASCADE)

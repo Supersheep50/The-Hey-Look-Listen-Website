@@ -4,6 +4,9 @@ from django.contrib.auth.models import User
 """
 Code adapted from Code Institute
 """
+"""
+Post model for making Forum posts
+"""
 
 
 class Post(models.Model):

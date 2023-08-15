@@ -7,7 +7,9 @@ Code adapted from Code Institute walkthrough
 """
 
 class FollowerSerializer(serializers.ModelSerializer):
-   
+    """
+    Code adapted from Code Institute
+    """
     owner = serializers.ReadOnlyField(source='owner.username')
     followed_name = serializers.ReadOnlyField(source='followed.username')
 

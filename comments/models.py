@@ -2,7 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from posts.models import Post
 
-
+"""
+Comment model
+"""
 class Comment(models.Model):
     """
     Code adapted from Code Institute

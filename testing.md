@@ -5,6 +5,7 @@
   - Likes
   - Forum Posts
   - Profiles
+  - Followers
   
   
 - All nav links are functional. Links either open in a new window (if there is no navigation on the target page), or new pages provide the option to go back.
@@ -40,14 +41,14 @@ The site scores highly for accessibility in Lighthouse testing. Suggestions for 
 
 ### Fixed Bugs
 
-See the [closed issues tab](https://github.com/StephHjar/goodgames-react/issues?q=is%3Aissue+label%3Abug+is%3Aclosed) labelled 'bug' in my GitHub repository for bugs that arose and how I resolved them.
+- Had an issue where only the Profiles tab was showing in the Django admin. Turned out I hadn't registered the rest of the componements in their admin.py files.
+- At one point only the front end of the project was displaying and the backend was showing a Bad Request (400). Turned out I needed to add the gitpod URL to Allowed Hosts in settings.py.
+- Spotify embedded links were not working correctly. After reviewing the Spotify Dev docs I was able to pull the correct Urls from the embedded code to get them working. 
 
 ### Unfixed Bugs
-- There is one bug left unfixed in my [GitHub issues](https://github.com/StephHjar/goodgames-react/issues/24).
+- 
 
-- There is also an issue that appears only on very slow internet connections, that I am only able to replicate reliably using Chrome on mobile, where the site doesn't detect the current user in time. This causes the user to be redirected to the home page when trying to edit their own post or profile, even though they are the owner. Sean with Tutor Support spent about two hours investigating this with me, and we were only able to narrow the cause down to the `useEffect` hook not giving the site long enough to return the current user before redirecting the user away from the page. The other way this manifests is that occasionally the `...` menu option to edit or deelte a post or profile does not appear, even if the currently logged in user is the owner of the post or profile. Again, I am only able to reliably replicate this on my own mobile device using Chrome, and only using a slow wifi connection while travelling; I was not able to replicate this on my home internet connection, and Sean couldn't replicate the issue on his own mobile device.
-
-Because this issue is so intermittent and difficult to reliably replicate, it has proven difficult to debug. If I had not been travelling, I likely wouldn't have even known the issue existed, using the stable internet connection at home. This issue does warrant further investigation beyond the scope of this project, but without being able to consistently replicate it on desktop for now I am leaving this as a documented bug.
+- 
 
 
 
