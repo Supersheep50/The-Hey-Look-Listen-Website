@@ -8,9 +8,8 @@ Hey! Look! Listen! is a website where you can check out the latest podcasts and 
 
 This is the frontend of the appliation, built with React.
 
-- The deployed version of the full site built in React is [HERE]().
-- The deployed version of the API is [HERE]().
-- The backend repository is [HERE]().
+- The deployed version of the full site built is [HERE]().
+
 
 ## Wireframes
 
@@ -82,6 +81,12 @@ This is the view at the end of my project:
   - A user can add a post to the HLL forum here. Clicking the button gives users the ability to add an episode title, a photo and some text. A similiar approach to Reddits forum pages.
     ![Post](frontend/src/assets/add-post.jpg)
     ![Podcast page](frontend/src/assets/podcasts-page.jpg)
+
+- **Delete a post**
+
+  - A user can also edit or delete a Post. 
+    ![Delete Post](frontend/src/assets/delete-a-post.jpg)
+    
 
 - **Gaming Yarns**
 
