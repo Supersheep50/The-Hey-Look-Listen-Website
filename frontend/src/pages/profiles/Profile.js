@@ -12,6 +12,7 @@ import { useSetProfileData } from "../../contexts/ProfileDataContext";
 const Profile = (props) => {
   const { profile, mobile, imageSize = 55 } = props;
   const { id, following_id, image, owner } = profile;
+  console.log({profile})
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
