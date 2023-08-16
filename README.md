@@ -128,12 +128,17 @@ This is the view at the end of my project:
   - The Navbar showcases two links to exisiting HLL projects, The HLL Quiz and The Secret of the HLL Tomb.
     ![Exisiting projects](frontend/src/assets/exisitng-projects.jpg)
 
+- **Drop down menu**
+  - The website is fully responsive. A drop down menu is used for when the website is used on a tablet oh phone.
+    ![Drop down menu](frontend/src/assets/dropdown-menu%20.jpg)
+
 ### Features To Be Implemented
 
 Features that were outside the scope of this project, but that will be added in future sprints:
 
 - I had hoped to include videoplay for our Youtube channel but sadly ran out of time.
 - The ability to also up vote or down vote podcast episodes would be a cool feature.
+- I would love to incorporate one of my exisiting projects which was a text based game into the website.
 
 ## Testing
 
@@ -189,10 +194,12 @@ Before your final deployment, complete the following steps:
 
 ### Content & Code
 
-- Code throughout this project was adapted from Code Institute's Moments walkthrough.
+- Some Frontend code in this project was adapted from Code Institute's Moments walkthrough.
+- Some Backend code in this project was adapted from Code Institute's Django walkthrough.
 - I used [Spotify Dev Documents](https://developer.spotify.com/documentation/embeds) to help with embedding Spotify podcasts on the podcasts page.
 - I used [Stackoverflow](https://stackoverflow.com/questions/60802487/react-images-gallery) some small bits of code and theory adapted here for the Yarns page. 
 - Deployment steps are adapted from Code Institute's Momments walkthrough.
+- I used [Stackoverflow](https://stackoverflow.com/questions/64927692/implement-follow-and-unfollow-button-in-react-js) when having issues implementing the follow/unfollow functionality. Ended up reverting to the walkthrough code as I hit some big snags that Tutor Support had to help with. 
 
 ### Media
 
@@ -200,11 +207,6 @@ Before your final deployment, complete the following steps:
 - I used [CloudConvert] to convert images to WEBP format.
 - I used [Favicon Generator](https://favicon.io/) to create my favicon.
 - The 'no results' icon and 'search icon' are from [Flaticon](https://www.flaticon.com/).
-
-
-### Thank you 
-
-Huge thank you to my mentor AJ who was super supportive throughout. Big shout out to my partner Steph who helped me since day 1 of the course, couldn't have done it without her.
 
 
 # The Hey! Look! Listen! Website - Backend Readme
@@ -380,12 +382,7 @@ For Heroku deployment, follow these steps to connect your GitHub repository to t
 
 Push this update to GitHub, and the project should now be deployed and live on Heroku. 
 
-## Credits 
-### Content 
 
-- Code throughout this project was adapted from Code Institute's Moments walkthrough.
-- 
+### Thank you 
 
-### Media
-
-- The default profile image is from [Code Institute](https://codeinstitute.net/ie/)'s Django REST Framework walkthrough.
+Huge thank you to my mentor AJ who was super supportive throughout. Big shout out to my partner Steph who helped me since day 1 of the course, couldn't have done it without her.
