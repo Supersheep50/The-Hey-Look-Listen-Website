@@ -8,7 +8,7 @@ Hey! Look! Listen! is a website where you can check out the latest podcasts and 
 
 This is the frontend of the appliation, built with React.
 
-- The deployed version of the full site built is [HERE]().
+- The deployed version of the full site built is [HERE](https://hey-look-listen-8c4ae7f879be.herokuapp.com/).
 
 
 ## Wireframes
@@ -214,7 +214,7 @@ Welcome to the DRF API for The Hey! Look! Listen! Website.
 
 Hey! Look! Listen! is a website where you can check out the latest podcasts and gaming content from HLL. Users are able to create a profile and post photos on the Forum page. They can also like and comment on other users posts.
 
-- The deployed version of the full site built in React is [HERE](https://goodgames-react.herokuapp.com/).
+- The deployed version of the full site built in React is [HERE](https://hey-look-listen-8c4ae7f879be.herokuapp.com/).
 
 
 ## Features
@@ -284,11 +284,11 @@ To preview the project in the development environment, run the following command
 ```python3 manage.py runterminal```. This will open port 8000. Click *Open Browser* when the popup window appears.
 
 To make a local copy of this repository, you can clone the project by typing the follow into your IDE terminal:
-- `git clone https://github.com/StephHjar/goodgames-drf-api.git` 
+- `git clone https://github.com/Supersheep50/The-Hey-Look-Listen-Website` 
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/StephHjar/goodgames-drf-api)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://supersheep50-hllbackend-vfio4emeyia.ws-eu104.gitpod.io)
 
 ### Preparing File for Deployment
 If you have not already set up Postgres for use in the deployed application, complete the following steps:
@@ -308,7 +308,7 @@ The instructions to create a new account can be[found here](https://code-institu
 Once you have created an account:
 - Log in to ElephantSQL to access your dashboard.
 - Click *Create New Instance*.
-- Give your plan a name (usually the name of the project, in this case *GoodGames-DRF-API*).
+- Give your plan a name (usually the name of the project, in this case *Hey-Look-Listen*).
 - Select the Tiny Turtle (Free) plan.
 - Leave the Tags field blank.
 - Click *Select Region* and choose a data center near you.
@@ -364,8 +364,8 @@ Deployment steps are as follows, from the Heroku dashboard:
 - From the dropdown, choose the region closest to you (EU or USA), and finally, select *Create App*.
 - From the new app *Settings*, click *Reveal Config Vars*, and add a new Config Var with the KEY set to `DATABASE_URL` and the value to the ElephantSQL database URL you copied above.
 - I added additional Config Vars for the folLowing:
-  - `ALLOWED_HOST` with the url for my deployed API (*goodgames-drf-api.herokuapp.com*).
-  - `CLIENT_ORIGIN` with the url for my deployed frontend application (*https://goodgames-react.herokuapp.com*).
+  - `ALLOWED_HOST` with the url for my deployed API (* hey-look-listen-8c4ae7f879be.herokuapp.com*).
+  - `CLIENT_ORIGIN` with the url for my deployed frontend application (*https://supersheep50-hey-look-listen-vfio4emeyia.ws-eu102.gitpod.io*).
   - `CLIENT_ORIGIN_DEV` with the url for the development version of my frontend application ()
   - `CLOUDINARY_URL` copied from my [Cloudinary](https://cloudinary.com/) dashboard, because I used Cloudinary to host my static files.
   - `DISABLE_COLLECTSTATIC` to *1* because I do not need to load new static files on deployment.
