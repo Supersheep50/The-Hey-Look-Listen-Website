@@ -366,7 +366,7 @@ Deployment steps are as follows, from the Heroku dashboard:
 - I added additional Config Vars for the folLowing:
   - `ALLOWED_HOST` with the url for my deployed API (*goodgames-drf-api.herokuapp.com*).
   - `CLIENT_ORIGIN` with the url for my deployed frontend application (*https://goodgames-react.herokuapp.com*).
-  - `CLIENT_ORIGIN_DEV` with the url for the development version of my frontend application (*https://3000-stephhjar-goodgamesreac-2fkbldq92dd.ws-eu89.gitpod.io*)
+  - `CLIENT_ORIGIN_DEV` with the url for the development version of my frontend application ()
   - `CLOUDINARY_URL` copied from my [Cloudinary](https://cloudinary.com/) dashboard, because I used Cloudinary to host my static files.
   - `DISABLE_COLLECTSTATIC` to *1* because I do not need to load new static files on deployment.
   - `SECRET_KEY` which contains my secret key (also included in `env.py`).
