@@ -12,7 +12,7 @@ This is the frontend of the appliation, built with React.
 
 ## Project Goal
 
-My goal with this project was to build a fully functioning website for the podcast that I co-host with a few friends. I wanted to build something where listeners to find episodes of the podcasts, Gaming Yarns and also interact with other listeners. My hope was to build something that would help the hosts interact with the community. 
+My goal with this project was to build a fully functioning website for the podcast that I co-host with a few friends. I wanted to build something where listeners could go to find episodes of the podcasts, Gaming Yarns and also interact with other listeners. My hope was to build something that would help the hosts interact with the community. 
 
 ## Wireframes
 
@@ -114,46 +114,43 @@ This is the view at the end of my project:
 
 - **Profile Page**
   - The profile page allows a user to view their own or another user's profile. Users can edit their own profile by adding an image and/or a bio. The page also displays the number of posts, followers and how many users they are following. It also shows a feed for their posts.
-    ![Profile page](frontend/src/assets/profile-page.jpg)
+  ![Profile page](frontend/src/assets/profile-page.jpg)
 
 - **Followers**
 
   - Users can follow and unfollow each other. The top fans of the podcast are displayed on the Forum page. 
-    ![Followers](frontend/src/assets/followers.jpg)
+  ![Followers](frontend/src/assets/followers.jpg)
       
 - **Exisiting HLL Projects**
   - The Navbar showcases two links to exisiting HLL projects, The HLL Quiz and The Secret of the HLL Tomb.
-    ![Exisiting projects](frontend/src/assets/exisitng-projects.jpg)
+  ![Exisiting projects](frontend/src/assets/exisitng-projects.jpg)
 
-- **Drop down menu**
-  - The website is fully responsive. A drop down menu is used for when the website is used on a tablet oh phone.
-    ![Drop down menu](frontend/src/assets/dropdown-menu%20.jpg)
 
 ### Reusable Components 
 
 - **Navigation Bar**
 
   - The navigation bar appears across all pages of the application, and the icons that appear depend on whether the user is logged in or out. Below is the view for a logged in user. 
-    ![Navbar](frontend/src/assets/nav-bar.jpg)
-    ![Navbar Logged out](frontend/src/assets/nav-bar-logged-out.jpg)
+  ![Navbar](frontend/src/assets/nav-bar.jpg)
+  ![Navbar Logged out](frontend/src/assets/nav-bar-logged-out.jpg)
 
 - **Spinner** 
 
-- The forum page showcases a spinner while the page is loading. I was unable to take a screenshot as the page was reloading so quickly.
+  - The forum page showcases a spinner while the page is loading. I was unable to take a screenshot as the page was reloading so quickly.
 
 - **Avatar** 
 
-- Users create a profile and add a photo. This shows up on the profile page, Biggest Fans and for each post they make. 
+  - Users create a profile and add a photo. This shows up on the profile page, Biggest Fans and for each post they make. 
 ![Avatar](frontend/src/assets/reusable-component-avatar.png)
 
 - **Dropdown Menu**
 
-- On mobile and tablet users see the menu in a dropdown menu. This displays across all pages they will click into and use.
+  - On mobile and tablet users see the menu in a dropdown menu. This displays across all pages they will click into and use.
 ![Dropdown Menu](frontend/src/assets/reusable-component-dropdown.png)
 
 - **Not Found**
 
-- If the user lands on a page that is not a part of the website they will be greeted with a Not Found page. 
+  - If the user lands on a page that is not a part of the website they will be greeted with a Not Found page. 
 ![Not Found](frontend/src/assets/reusable-component-not-found.png)
 
 ### Features To Be Implemented
