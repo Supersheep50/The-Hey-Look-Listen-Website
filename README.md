@@ -10,6 +10,9 @@ This is the frontend of the appliation, built with React.
 
 - The deployed version of the full site built is [HERE](https://hey-look-listen-8c4ae7f879be.herokuapp.com/).
 
+## Project Goal
+
+My goal with this project was to build a fully functioning website for the podcast that I co-host with a few friends. I wanted to build something where listeners to find episodes of the podcasts, Gaming Yarns and also interact with other listeners. My hope was to build something that would help the hosts interact with the community. 
 
 ## Wireframes
 
@@ -62,12 +65,6 @@ This is the view at the end of my project:
 ## Features
 
 ### Existing Features
-
-- **Navigation Bar**
-
-  - The navigation bar appears across all pages of the application, and the icons that appear depend on whether the user is logged in or out. Below is the view for a logged in user. 
-    ![Navbar](frontend/src/assets/nav-bar.jpg)
-    ![Navbar Logged out](frontend/src/assets/nav-bar-logged-out.jpg)
 
 - **Podcast Page**
 
@@ -131,6 +128,33 @@ This is the view at the end of my project:
 - **Drop down menu**
   - The website is fully responsive. A drop down menu is used for when the website is used on a tablet oh phone.
     ![Drop down menu](frontend/src/assets/dropdown-menu%20.jpg)
+
+### Reusable Components 
+
+- **Navigation Bar**
+
+  - The navigation bar appears across all pages of the application, and the icons that appear depend on whether the user is logged in or out. Below is the view for a logged in user. 
+    ![Navbar](frontend/src/assets/nav-bar.jpg)
+    ![Navbar Logged out](frontend/src/assets/nav-bar-logged-out.jpg)
+
+- **Spinner** 
+
+- The forum page showcases a spinner while the page is loading. I was unable to take a screenshot as the page was reloading so quickly.
+
+- **Avatar** 
+
+- Users create a profile and add a photo. This shows up on the profile page, Biggest Fans and for each post they make. 
+![Avatar](frontend/src/assets/reusable-component-avatar.png)
+
+- **Dropdown Menu**
+
+- On mobile and tablet users see the menu in a dropdown menu. This displays across all pages they will click into and use.
+![Dropdown Menu](frontend/src/assets/reusable-component-dropdown.png)
+
+- **Not Found**
+
+- If the user lands on a page that is not a part of the website they will be greeted with a Not Found page. 
+![Not Found](frontend/src/assets/reusable-component-not-found.png)
 
 ### Features To Be Implemented
 
@@ -216,6 +240,11 @@ Hey! Look! Listen! is a website where you can check out the latest podcasts and 
 
 - The deployed version of the full site built in React is [HERE](https://hey-look-listen-8c4ae7f879be.herokuapp.com/).
 
+
+### Entity Relationship Diagram
+
+- In the planning stage of this project I created an Entity Relationship Diagram to plan out how different componenets of the website would work together. This did change and alter over the course of the project as the plan for the website got bigger.
+![ERD](frontend/src/assets/entity-diagram.png)
 
 ## Features
 
