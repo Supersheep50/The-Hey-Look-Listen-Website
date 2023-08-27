@@ -5,37 +5,32 @@ import { axiosRes } from "../../api/axiosDefaults";
 
 import styles from "../../styles/CommentCreateEditForm.module.css";
 
-
-// Code adapted from Code Institute walkthrough
-
 function CommentEditForm(props) {
-  const { id, content, setShowEditForm, setComments } = props;
+  const { id, content, setShowEditForm, setComments, handleCommentCreation, handleCommentEditing } = props;
 
   const [formContent, setFormContent] = useState(content);
 
-  const handleChange = (event) => {
-    setFormContent(event.target.value);
-  };
+  const handleChange = (event) => setFormContent(event.target.value);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axiosRes.put(`/comments/${id}/`, {
-        content: formContent.trim(),
-      });
+      await axiosRes.put(`/comments/${id}/`, { content: formContent.trim() });
       setComments((prevComments) => ({
         ...prevComments,
         results: prevComments.results.map((comment) => {
           return comment.id === id
-            ? {
-                ...comment,
-                content: formContent.trim(),
-                updated_at: "now",
-              }
+            ? { ...comment, content: formContent.trim(), updated_at: "now" }
             : comment;
         }),
       }));
       setShowEditForm(false);
+
+      if (id) {
+        handleCommentEditing();
+      } else {
+        handleCommentCreation();
+      }
     } catch (err) {
       console.log(err);
     }
@@ -65,7 +60,7 @@ function CommentEditForm(props) {
           disabled={!content.trim()}
           type="submit"
         >
-          save
+          {id ? "save" : "post"}
         </button>
       </div>
     </Form>

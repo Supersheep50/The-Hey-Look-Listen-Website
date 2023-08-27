@@ -9,19 +9,8 @@ import styles from "../../styles/Comment.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
 
-// Code adapted from Code Institute walkthrough
-
 const Comment = (props) => {
-  const {
-    profile_id,
-    profile_image,
-    owner,
-    updated_at,
-    content,
-    id,
-    setPost,
-    setComments,
-  } = props;
+  const { profile_id, profile_image, owner, updated_at, content, id, setPost, setComments } = props;
 
   const [showEditForm, setShowEditForm] = useState(false);
   const currentUser = useCurrentUser();
@@ -38,13 +27,21 @@ const Comment = (props) => {
           },
         ],
       }));
-
       setComments((prevComments) => ({
         ...prevComments,
         results: prevComments.results.filter((comment) => comment.id !== id),
       }));
-    } catch (err) {}
+      alert('Comment Deleted!');
+    } catch (err) {
+      console.error(err);
+    }
   };
+
+  const handleEdit = () => setShowEditForm(true);
+  const handleEditCancel = () => setShowEditForm(false);
+
+  const handleCommentCreation = () => alert('Comment Successful!');
+  const handleCommentEditing = () => alert('Comment Edited!');
 
   return (
     <>
@@ -59,11 +56,12 @@ const Comment = (props) => {
           {showEditForm ? (
             <CommentEditForm
               id={id}
-              profile_id={profile_id}
               content={content}
-              profileImage={profile_image}
               setComments={setComments}
               setShowEditForm={setShowEditForm}
+              handleEditCancel={handleEditCancel}
+              handleCommentCreation={handleCommentCreation}
+              handleCommentEditing={handleCommentEditing}
             />
           ) : (
             <p>{content}</p>
@@ -71,7 +69,7 @@ const Comment = (props) => {
         </Media.Body>
         {is_owner && !showEditForm && (
           <MoreDropdown
-            handleEdit={() => setShowEditForm(true)}
+            handleEdit={handleEdit}
             handleDelete={handleDelete}
           />
         )}
