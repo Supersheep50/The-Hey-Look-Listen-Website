@@ -8,8 +8,9 @@ Code adapted from Code Institute
 """
 Followers model
 """
+
+
 class Follower(models.Model):
- 
     owner = models.ForeignKey(
         User, related_name='following', on_delete=models.CASCADE
     )

@@ -5,6 +5,8 @@ from posts.models import Post
 """
 Comment model
 """
+
+
 class Comment(models.Model):
     """
     Code adapted from Code Institute
@@ -20,5 +22,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.content
-
-

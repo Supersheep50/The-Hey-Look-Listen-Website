@@ -10,7 +10,6 @@ Post model for making Forum posts
 
 
 class Post(models.Model):
-   
     image_filter_choices = [
         ('_1977', '1977'),
         ('brannan', 'Brannan'),

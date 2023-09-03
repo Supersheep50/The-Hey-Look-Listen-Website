@@ -10,8 +10,9 @@ Code adapted from Code Institute
 """
 Likes model
 """
-class Like(models.Model):
 
+
+class Like(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(
         Post, related_name='likes', on_delete=models.CASCADE
@@ -24,8 +25,3 @@ class Like(models.Model):
 
     def __str__(self):
         return f'{self.owner} {self.post}'
-
-
-
-
-

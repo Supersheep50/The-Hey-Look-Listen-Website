@@ -6,6 +6,7 @@ from .models import Follower
 Code adapted from Code Institute walkthrough
 """
 
+
 class FollowerSerializer(serializers.ModelSerializer):
     """
     Code adapted from Code Institute

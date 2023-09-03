@@ -9,6 +9,7 @@ from .serializers import PostSerializer
 Code adapted from Code Institute
 """
 
+
 class PostList(generics.ListCreateAPIView):
     """
     List posts or create a post if logged in

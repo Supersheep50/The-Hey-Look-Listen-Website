@@ -6,6 +6,8 @@ from followers.models import Follower
 Profile serializer. Code adapted from Code Institute's DRF API
 walkthrough.
 """
+
+
 class ProfileSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()

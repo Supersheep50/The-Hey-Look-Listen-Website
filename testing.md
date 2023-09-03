@@ -17,27 +17,21 @@ The site was tested for responsiveness on the following desktop and mobile devic
 ### Validator Testing
 
 - HTML
-  - When passing through the [W3C validator](https://validator.w3.org/) I received no errors and 11 notes, all related to trailing slashes. These have been left in place as the Prettier code formatter automatically inserts these.
-    - [Link to PDF report](src/assets/readme/HTMLValidator.pdf)
+  - When passing through the [W3C validator](https://validator.w3.org/) I received no errors and 9 notes, all related to trailing slashes. These have been left in place as the Prettier code formatter automatically inserts these.
+    - ![HTML](/frontend/src/assets/html-validator.png)
 - CSS
-  - When passing through the [Jigsaw validator][https://jigsaw.w3.org/css-validator/] I received an error in both CommentCreateEditForm.module.css & ReviewCreateEditForm as one colour attribute was missing a `#`.
-    - [Link to PDF report](src/assets/readme/CSSValidator.pdf)
-  - I also received an error saying that the `scale` attribute does not exist, for resizing the checkboxes in PostCreateEditForm. Adjusting this to `transform: scale(0.5);` resolved the error with the same end result on the deployed site.
-    - [Link to PDF report](src/assets/readme/CSSValidator2.pdf)
+  - When passing through the [Jigsaw validator][https://jigsaw.w3.org/css-validator/] I received no errors.
+    - ![CSS](/frontend/src/assets/css-validator.png)
 - JavaScript / React
-  - When passing through ESHint in Gitpod, I received a number of errors around props not being validated, across all files with props (an example screenshot is below). I also received errors in my context files since React had not been imported. I resolved the React errors by importing React into these files. Based on some research, including [this article](https://forhjy.medium.com/react-solution-for-children-is-missing-in-props-validation-eslint-react-prop-types-2e11bc6043c7) I have decided to leave these errors unresolved for now, as the project is limited in scope and these do not affect its functionality.
+  - When passing through ESHint in Gitpod, I received a number of errors 
     ![Screenshot of ESLint errors](src/assets/readme/ESHintValidator.png)
 
 ### Lighthouse Testing
 
 ![Screenshot of Lighthouse texting results](src/assets/readme/lighthouse.png)
 
-The site scores highly for accessibility in Lighthouse testing. Suggestions for improving performance were:
-
-- Reducing unused JavaScript (files included in the node_modules, which were provided by Code Institute).
-- Setting images to specific sizes (which I have not done to ensure the site is responsive).
-- Minifying JavaScript (outside the scope of this project).
-- Eliminating render-blocking resources (which were imports for Bootstrap, FontAwesome, and Google Fonts).
+The site scores highly across the board but lower in performance. The reason being due to the man extensions I have on Chrome. Sadly these are for work and can not be removed. 
+    - ![Lighthouse](/frontend/src/assets/lighthouse-testing.png)
 
 ### Fixed Bugs
 
@@ -46,7 +40,7 @@ The site scores highly for accessibility in Lighthouse testing. Suggestions for 
 - Spotify embedded links were not working correctly. After reviewing the Spotify Dev docs I was able to pull the correct Urls from the embedded code to get them working. 
 
 ### Unfixed Bugs
-- 
+- I have not found any unfixed bugs. 
 
 ### Backend Manual Testing
 
@@ -58,7 +52,7 @@ No errors were found whne passing through the [CI Python Linter](https://pep8ci.
     - serializers.py
     - urls.py
     - views.py 
-- games app:
+- followers app:
     - apps.py
     - models.py
     - serializers.py
@@ -82,17 +76,11 @@ No errors were found whne passing through the [CI Python Linter](https://pep8ci.
     - serializers.py
     - urls.py
     - views.py 
-- reviews app:
-    - apps.py
-    - models.py
-    - serializers.py
-    - urls.py
-    - views.py 
-- goodgames_drf_api app:
+- hll_drf_api app:
     - asgi.py
     - permissions.py
     - serializers.py
-    - settings.py
+    - settings.py (some lines too long but cant fix this. For example, Allowed Hosts needs to be that long)
     - urls.py
     - views.py
     - wsgi.py
@@ -116,61 +104,28 @@ And by going through all CRUD screens and forms on the local application to ensu
         - post field cannot be edited
         - free text content field can be edited
         - comment can be deleted
-- games:
-    - logged in user can create a game:
-        - free text title field
-        - image field
-        - free text description field
-    - admin can edit and delete a game:
-        - title can be edited
-        - image can be changed
-        - description can be edited
-        - game can be deleted
 - likes:
     - logged in user can create a like
         - each like is associated with:
-            - game
-            - comment
-            - post, or
-            - review
-    - owner of a like can delete their own like
+            - a post
+            - owner of a like can delete their own like
 - posts:
     - logged in user can create a post:
-        - associated with a game (from dropdown)
-        - currently playing checkbox / boolean field
-        - completed checkbox / boolean field
+        - add a photo and title
         - free text notes field
     - owner of a post can edit and delete their own post:
-        - game field can be edited (new game chosen from dropdown)
-        - currently playing boolean field can be edited
-        - completed boolean field can be edited
         - notes field can be edited
         - post can be deleted
 - profiles:
     - profile is automatically created when a new user signs up
     - owner of a profile can edit or delete their own profile:
         - name free text field can be added
-        - description free text fiele can be added
+        - bio can be added
         - image can be added
-        - profile can be deleted (this functionality is not present on the deployed frontend application)
-- reviews: 
-    - logged in user can add a review:
-        - associated with a post (from dropdown)
-        - rating field (must be an integer between 1-5, error will appear if anything else is entered)
-        - free text content field
-    - owner of a review can edit or delete their review:
-        - post field cannot be edited
-        - rating field can be edited (with same requirements as creating a review)
-        - free text content field can be edited
-        - review can be deleted
+        - profile, username and password can be edited.
 
-### Unfixed Bugs
 
-There is one error message in the console:
-![Favicon not loading](static/readme/favicon-error.png)
-This is because I have not created a favicon for the deployed version of this site. Because this is a backend API that is only intended to be accessed by my frontend application, and not by users of the site, I will not be adding a favicon.
 
-The 'likes' model also allows for a like to be associated with more than one object (i.e. a game and a post), but the design of the frontend application makes this impossible for the user to implement in practice, as a new like is created every time a user adds a like to a post, comment, review, or game and likes cannot be edited.
 
 
 

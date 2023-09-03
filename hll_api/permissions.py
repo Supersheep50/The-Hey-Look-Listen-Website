@@ -3,6 +3,8 @@ from rest_framework import permissions
 """
 Code adapted from Code Institute
 """
+
+
 class IsOwnerOrReadOnly(permissions.BasePermission):
   def has_object_permission(self, request, view, obj):
     if request.method in permissions.SAFE_METHODS:
