@@ -10,7 +10,7 @@
   
 - All nav links are functional. Links either open in a new window (if there is no navigation on the target page), or new pages provide the option to go back.
 - Users must be logged in to add Posts and edit their own Comments, Likes and Profiles. They must also be logged in to follow and unfollow other users.
-
+- Only the admin can delete other users posts or comments. 
 
 The site was tested for responsiveness on the following desktop and mobile devices: Macbook (Chrome and Safari), iPhone13 & Pixel 7 Pro (Chrome and Safari).
 
@@ -23,8 +23,8 @@ The site was tested for responsiveness on the following desktop and mobile devic
   - When passing through the [Jigsaw validator][https://jigsaw.w3.org/css-validator/] I received no errors.
     - ![CSS](/frontend/src/assets/css-validator.png)
 - JavaScript / React
-  - When passing through ESHint in Gitpod, I received a number of errors 
-    ![Screenshot of ESLint errors](src/assets/readme/ESHintValidator.png)
+  - I passed through every JS file through the editor. No errors found but many warnings around certain lines of code being present in differing version of Javascript. Seeing as I am using the CI recommended version of JS, I have left these warnings present. 
+    ![Screenshot of ESLint warnings](frontend/src/assets/jshint-warnings.png)
 
 ### Lighthouse Testing
 
@@ -86,14 +86,6 @@ No errors were found whne passing through the [CI Python Linter](https://pep8ci.
     - wsgi.py
 
 ### Manual Testing
-
-The API was tested manually by ensuring all pages loaded without error on the deployed site:
-- [comments](https://goodgames-drf-api.herokuapp.com/comments/)
-- [games](https://goodgames-drf-api.herokuapp.com/games/)
-- [likes](https://goodgames-drf-api.herokuapp.com/likes/)
-- [posts](https://goodgames-drf-api.herokuapp.com/posts/)
-- [profiles](https://goodgames-drf-api.herokuapp.com/profiles/)
-- [reviews](https://goodgames-drf-api.herokuapp.com/reviews/)
 
 And by going through all CRUD screens and forms on the local application to ensure all the below functionality is present:
 - comments:

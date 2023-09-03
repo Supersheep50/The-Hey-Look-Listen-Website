@@ -6,7 +6,7 @@ Welcome to the React Frontend for Hey! Look! Listen!
 
 Hey! Look! Listen! is a website where you can check out the latest podcasts and gaming content from HLL. Users are able to create a profile and post photos on the Forum page. They can also like and comment on other users posts. 
 
-This is the frontend Readme of the application, built with React.
+This is the frontend Readme of the application, built with React. React was used due to its ease and flexibility. Also due to the easy way components can be reused throughout thr website. 
 
 - The deployed version of the full site built is [HERE](https://hey-look-listen-8c4ae7f879be.herokuapp.com/).
 
