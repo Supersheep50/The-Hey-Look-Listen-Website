@@ -80,7 +80,7 @@ This is the view at the end of my project:
 
   - A user can add a post to the HLL forum here. Clicking the button gives users the ability to add an episode title, a photo and some text. A similiar approach to Reddits forum pages.
     ![Post](frontend/src/assets/add-post.jpg)
-    ![Podcast page](frontend/src/assets/podcasts-page.jpg)
+   
 
 - **Delete a post**
 
@@ -126,16 +126,21 @@ This is the view at the end of my project:
   - Users can follow and unfollow each other. The top fans of the podcast are displayed on the Forum page. 
   ![Followers](frontend/src/assets/followers.jpg)
       
-- **Exisiting HLL Projects**
+- **Existing HLL Projects**
   - The Navbar showcases two links to exisiting HLL projects, The HLL Quiz and The Secret of the HLL Tomb.
   ![Exisiting projects](frontend/src/assets/exisitng-projects.jpg)
+
+- **Comment alerts**
+ - When users make a comment or delete a comment, they are shown an alert confirming they have done so.
+ ![Comment Successful](frontend/src/assets/comment-successful.png)
+ ![Comment Deleted](frontend/src/assets/comment-deleted.png)
 
 
 ### Reusable Components 
 
 - **Navigation Bar**
 
-  - The navigation bar appears across all pages of the application, and the icons that appear depend on whether the user is logged in or out. Below is the view for a logged in user. 
+  - The navigation bar appears across all pages of the application, and the icons that appear depend on whether the user is logged in or out. Below is the view for a logged in user and below it a logged out user. 
   ![Navbar](frontend/src/assets/nav-bar.jpg)
   ![Navbar Logged out](frontend/src/assets/nav-bar-logged-out.jpg)
 
@@ -226,6 +231,7 @@ Before your final deployment, complete the following steps:
 - I used [Stackoverflow](https://stackoverflow.com/questions/60802487/react-images-gallery) some small bits of code and theory adapted here for the Yarns page. 
 - Deployment steps are adapted from Code Institute's Momments walkthrough.
 - I used [Stackoverflow](https://stackoverflow.com/questions/64927692/implement-follow-and-unfollow-button-in-react-js) when having issues implementing the follow/unfollow functionality. Ended up reverting to the walkthrough code as I hit some big snags that Tutor Support had to help with. 
+- Along with the aid of my mentor I used [npm](https://www.npmjs.com/package/react-alert) to add alerts for comments being posted and deleted.
 
 ### Media
 
@@ -259,6 +265,8 @@ Hey! Look! Listen! is a website where you can check out the latest podcasts and 
    
 
 ## User Stories
+
+The criteria states to have my USer Stories listed for both the FE and BE. I couldn't find any information on how to rpesent this if you had joined the two Readmes, thus putting it here again just in case.
 
 I have divided the functionality of the site and database into epics and user stories below. These are also documented on my GitHub Project board found [here](https://github.com/users/Supersheep50/projects/5).
 
