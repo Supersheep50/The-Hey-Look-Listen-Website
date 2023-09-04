@@ -24,11 +24,9 @@ The site was tested for responsiveness on the following desktop and mobile devic
     - ![CSS](/frontend/src/assets/css-validator.png)
 - JavaScript / React
   - I passed through every JS file through the editor. No errors found but many warnings around certain lines of code being present in differing version of Javascript. Seeing as I am using the CI recommended version of JS, I have left these warnings present. 
-    ![Screenshot of ESLint warnings](frontend/src/assets/jshint-warnings.png)
+    - ![Screenshot of ESLint warnings](frontend/src/assets/jshint-warnings.png)
 
 ### Lighthouse Testing
-
-![Screenshot of Lighthouse texting results](src/assets/readme/lighthouse.png)
 
 The site scores highly across the board but lower in performance. The reason being due to the man extensions I have on Chrome. Sadly these are for work and can not be removed. 
     - ![Lighthouse](/frontend/src/assets/lighthouse-testing.png)
