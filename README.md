@@ -6,7 +6,7 @@ Welcome to the React Frontend for Hey! Look! Listen!
 
 Hey! Look! Listen! is a website where you can check out the latest podcasts and gaming content from HLL. Users are able to create a profile and post photos on the Forum page. They can also like and comment on other users posts. 
 
-This is the frontend Readme of the application, built with React. 
+This is the frontend Readme of the application. 
 
 ## Frontend Technologies used
 - React - React was used due to its ease and flexibility. Also due to the easy way components can be reused throughout the website. 
@@ -45,8 +45,8 @@ This is the view at the end of my project:
 
 **User Stories:**
 
-- As a **user** I can **add a new post** so that **I can talk about my favorite podcast epsidoes**
-- As a **user** I can **edit my posts** so that **I can make changes after listening to episodes or rading comments**
+- As a **user** I can **add a new post** so that **I can talk about my favorite podcast episodes**
+- As a **user** I can **edit my posts** so that **I can make changes after listening to episodes or reading comments**
 - As a **user** I can **delete my posts** so that **I can remove posts made in error, or that I don't want displayed on my profile anymore**
 - As a **user** I can **like and unlike other users' posts** so that **I can engage with content that I enjoy**
 
@@ -65,7 +65,7 @@ This is the view at the end of my project:
 
 - As a **site admin** I can **add, edit, and delete profiles from the database** so that **users have the most up-to-date list of games to choose from**
 - As a **site admin** I can **remove posts or comments if they are not appropriate or relevant** so that **the site is enjoyable and accessible to all users**
-- As a **site admin** I can **see lists of all user profiles, posts, games, reviews, likes, and comments** so that **I have an overview of all activity on the site**
+- As a **site admin** I can **see lists of all user profiles, posts, ,likes, and comments** so that **I have an overview of all activity on the site**
 
 ## Features
 
@@ -73,7 +73,7 @@ This is the view at the end of my project:
 
 - **Podcast Page**
 
-  - The Podcast Page showcases all the episodes of the HLL podcast with updates every 2 weeks. Users can listen to epiosdes here if they like or click the player and be brought to the HLL Spotify page.
+  - The Podcast Page showcases all the episodes of the HLL podcast with updates every 2 weeks. Users can listen to episodes here if they like or click the player and be brought to the HLL Spotify page.
     ![Podcast page](frontend/src/assets/podcasts-page.jpg)
     
 - **Add a post**
@@ -127,8 +127,8 @@ This is the view at the end of my project:
   ![Followers](frontend/src/assets/followers.jpg)
       
 - **Existing HLL Projects**
-  - The Navbar showcases two links to exisiting HLL projects, The HLL Quiz and The Secret of the HLL Tomb.
-  ![Exisiting projects](frontend/src/assets/exisitng-projects.jpg)
+  - The Navbar showcases a link to an existing HLL project, The HLL Quiz.
+  ![Exisiting project](frontend/src/assets/exisiting-project.png)
 
 - **Comment alerts**
  - When users make a comment or delete a comment, they are shown an alert confirming they have done so.
@@ -155,7 +155,7 @@ This is the view at the end of my project:
 
 - **Dropdown Menu**
 
-  - On mobile and tablet users see the menu in a dropdown menu. This displays across all pages they will click into and use.
+  - On mobile and tablet, users see the menu in a dropdown menu. This displays across all pages they will click into and use.
 ![Dropdown Menu](frontend/src/assets/reusable-component-dropdown.png)
 
 - **Not Found**
@@ -266,7 +266,7 @@ Hey! Look! Listen! is a website where you can check out the latest podcasts and 
 
 ## User Stories
 
-The criteria states to have my USer Stories listed for both the FE and BE. I couldn't find any information on how to rpesent this if you had joined the two Readmes, thus putting it here again just in case.
+The criteria states to have my User Stories listed for both the FE and BE. I couldn't find any information on how to present this if you had joined the two Readmes, thus putting it here again just in case.
 
 I have divided the functionality of the site and database into epics and user stories below. These are also documented on my GitHub Project board found [here](https://github.com/users/Supersheep50/projects/5).
 
