@@ -8,6 +8,7 @@ import CommentEditForm from "./CommentEditForm";
 import styles from "../../styles/Comment.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
+import { useAlert } from "react-alert";
 
 const Comment = (props) => {
   const { profile_id, profile_image, owner, updated_at, content, id, setPost, setComments } = props;
@@ -15,6 +16,8 @@ const Comment = (props) => {
   const [showEditForm, setShowEditForm] = useState(false);
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
+  const alert = useAlert()
 
   const handleDelete = async () => {
     try {
@@ -31,7 +34,7 @@ const Comment = (props) => {
         ...prevComments,
         results: prevComments.results.filter((comment) => comment.id !== id),
       }));
-      alert('Comment Deleted!');
+      alert.show('Comment Deleted!');
     } catch (err) {
       console.error(err);
     }

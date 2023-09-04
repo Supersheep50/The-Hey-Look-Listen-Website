@@ -7,12 +7,16 @@ import InputGroup from "react-bootstrap/InputGroup";
 import styles from "../../styles/CommentCreateEditForm.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import { useAlert } from "react-alert";
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
 
+  const alert = useAlert()
+
   const handleChange = (event) => setContent(event.target.value);
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -34,7 +38,7 @@ function CommentCreateForm(props) {
         ],
       }));
       setContent("");
-      alert('Comment Successful!');
+      alert.show('Comment Successful!');
     } catch (err) {
       console.log(err);
     }
